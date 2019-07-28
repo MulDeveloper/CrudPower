@@ -22,10 +22,6 @@ public class Campeonato {
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="ID_CLUB")
     private Club clubOrganizador;
-
-    @OneToMany(mappedBy="nombreApellidos")
-    @JoinColumn(name="NOMBRE_JUEZ")
-    private List <Juez> listaJueces;
     @Column(name="LOCALIDAD_CAMPEONATO")
     private String localidad;
             

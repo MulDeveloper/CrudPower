@@ -1,0 +1,24 @@
+
+package dev.muldev.crudpower.Controlador;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class CtrlPaginas {
+    
+    @GetMapping("/admin")
+    public String pagAdm(){
+        return "administracion";
+    }
+    
+    @GetMapping("/afiliados")
+    public String pagAfiliados(){
+        return "afiliados";
+    }
+    
+    @GetMapping("/clubs")
+    public String pagClubs(){
+        return "pagClubs";
+    }
+}
