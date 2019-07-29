@@ -3,10 +3,10 @@ package dev.muldev.crudpower.Services;
 
 import dev.muldev.crudpower.Dao.DAOAfiliado;
 import dev.muldev.crudpower.Modelos.Afiliado;
-import dev.muldev.crudpower.Modelos.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class ServiceAfiliadoImpl implements ServiceAfiliado{
     
     @Autowired

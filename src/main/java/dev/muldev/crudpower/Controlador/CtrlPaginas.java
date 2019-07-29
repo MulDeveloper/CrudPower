@@ -21,4 +21,13 @@ public class CtrlPaginas {
     public String pagClubs(){
         return "pagClubs";
     }
+    
+    @GetMapping("/jueces")
+    public String pagJuez(){
+        return "juez";
+    }
+    @GetMapping("/campeonatos")
+    public String pagCampe(){
+        return "campeonato";
+    }
 }
