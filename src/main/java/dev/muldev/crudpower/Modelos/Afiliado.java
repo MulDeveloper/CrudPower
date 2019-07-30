@@ -4,6 +4,8 @@ package dev.muldev.crudpower.Modelos;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -14,6 +16,7 @@ import javax.persistence.Table;
 public class Afiliado {
     @Id
     @Column(name="ID_AFILAIDO")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
     @Column(name="NOMBRE_AFILIADO")
     private String nombre;
@@ -24,6 +27,51 @@ public class Afiliado {
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="ID_CLUB")
     private Club club;
+
+    public Afiliado() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public Club getClub() {
+        return club;
+    }
+
+    public void setClub(Club club) {
+        this.club = club;
+    }
+    
+    
     
     
 }

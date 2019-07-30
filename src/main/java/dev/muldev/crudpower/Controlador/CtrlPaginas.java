@@ -7,15 +7,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class CtrlPaginas {
     
+    @GetMapping("/")
+    public String indexRedirect(){
+        return "administracion";
+    }
+    
+    
     @GetMapping("/admin")
     public String pagAdm(){
         return "administracion";
     }
     
-    @GetMapping("/afiliados")
+    /*@GetMapping("/afiliados")
     public String pagAfiliados(){
         return "afiliados";
-    }
+    }*/
     
     @GetMapping("/clubs")
     public String pagClubs(){
