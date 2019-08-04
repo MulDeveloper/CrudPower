@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Clubes powerlifting</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+
+    </head>
+    <body>
+        <div>
+            <p>Datos afiliado:</p>
+        
+        <form action="#" th:action="@{/altaBd}" th:object="${Afiliado}" method="post">
+            <div class="form-group">
+                <label>Nombre Afiliado:</label>
+                <input type="text" class="form-control" th:field="*{nombre}">
+                <label>Apellidos Afiliado:</label>
+                <input type="text" class="form-control" th:field="*{apellidos}">
+                <label>Edad:</label>
+                <input type="text" class="form-control" th:field="*{edad}">
+            </div>
+
+            <br>
+            <div class="form-group">
+            <label>Club:</label>
+            <select name="clubSelect" class="form-control" th:field="*{club}">
+              <option th:each="club : ${clubes}"
+                  th:value="${club.id}" 
+                  th:text="${club.nombre}"/>
+            </select>
+            <br>
+            <button type="submit" class="btn-primary">Insertar</button>
+            </div>
+        </form>    
+    </body>
+</html>

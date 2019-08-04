@@ -36,4 +36,11 @@ public class CtrlPaginas {
     public String pagCampe(){
         return "campeonato";
     }
+    
+    @GetMapping(value = "/afiliados")
+    public String principalAfiliados(){
+        return "afiliados";
+
+    }
+
 }

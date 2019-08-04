@@ -24,9 +24,8 @@ public class Afiliado {
     private String apellidos;
     @Column(name="EDAD_AFILIADO")
     private int edad;
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID_CLUB")
-    private Club club;
+    @Column(name="ID_CLUB")
+    private int club;
 
     public Afiliado() {
     }
@@ -63,11 +62,11 @@ public class Afiliado {
         this.edad = edad;
     }
 
-    public Club getClub() {
+    public int getClub() {
         return club;
     }
 
-    public void setClub(Club club) {
+    public void setClub(int club) {
         this.club = club;
     }
     
