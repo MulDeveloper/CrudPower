@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Datos afiliado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <div class="form-group">
+                <label>Id afiliado:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.id}">
+                <label>Nombre Afiliado:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.nombre}">
+                <label>Apellidos Afiliado:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.apellidos}">
+                <label>Edad:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.edad}">
+                
+                <br>
+                <a href="cargarUsuarios"><button type="submit" class="btn-primary">Volver</button></a>
+
+        </div>
+
+    </body>
+</html>

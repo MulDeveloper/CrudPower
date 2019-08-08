@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Informacion Afiliado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        
+        <div class="divprinci"><p>Datos de afiliado:</p>
+        <br>
+       
+        <table class="table">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Edad</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr th:each="Afiliado : ${afiliados}">
+                <td scope="row" th:text="${Afiliado.id}"></td>
+                <td scope="row" th:text="${Afiliado.nombre}"></td>
+                <td scope="row" th:text="${Afiliado.apellidos}"></td>
+                <td scope="row" th:text="${Afiliado.edad}"></td>
+                <td><a th:href="${'/verAfiliado/' + Afiliado.id}"><button type="submit" class="btn-primary">Ver</button></a></td>
+                <td><a th:href="${'/modificarAfiliado/' + Afiliado.id}">Editar</a></td>
+                <td><a th:href="${'/eliminarAfiliado/' + Afiliado.id}">Eliminar</a></td>
+            </tr>
+        </table>
+        </div>
+            
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+        <title>Datos afiliado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <form th:action="@{/modiBd}" th:object="${Afiliado}" method="post">
+        <div class="form-group">
+                <label>Id afiliado:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.id}">
+                <label>Nombre Afiliado:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.nombre}">
+                <label>Apellidos Afiliado:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.apellidos}">
+                <label>Edad:</label>
+                <input type="text" class="form-control" th:field="${Afiliado.edad}">
+                
+                <br>
+                <button type="submit" class="btn-primary">Modificar</button>
+
+        </div>
+        </form>
+
+    </body>
+</html>
