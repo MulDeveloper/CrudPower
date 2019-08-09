@@ -19,8 +19,7 @@ public class CtrlAfiliado {
     private ServiceClub serviceClub;
     @Autowired
     private ServiceAfiliado serviceAfiliado;
-    
-    private Afiliado aux;
+   
     
     @RequestMapping(value = "/altaAfiliado", method = RequestMethod.GET)
     public String listaClubs(Model m) throws Exception{

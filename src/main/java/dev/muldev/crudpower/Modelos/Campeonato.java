@@ -12,13 +12,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="CAMPEONATOS")
 public class Campeonato {
     @Id
     @Column(name="ID_CAMPEONATO")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GenericGenerator(name="idValor" , strategy="increment")
+    @GeneratedValue(generator="idValor")
     private int id;
     @Column(name="TIPO_CAMPEONATO")
     private String tipo;

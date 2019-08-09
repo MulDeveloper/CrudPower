@@ -42,5 +42,7 @@ public class CtrlPaginas {
         return "afiliados";
 
     }
+    
+    
 
 }

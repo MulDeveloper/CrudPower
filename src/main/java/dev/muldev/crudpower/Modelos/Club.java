@@ -10,15 +10,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="CLUBES")
 public class Club {
     @Id
     @Column(name="ID_CLUB")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GenericGenerator(name="idValor" , strategy="increment")
+    @GeneratedValue(generator="idValor")
     private int id;
     @Column(name="NOMBRE_CLUB")
+    @Size(min=8, max=35)
     private String nombre;
     @Column(name="LOCALIDAD_CLUB")
     private String localidad;

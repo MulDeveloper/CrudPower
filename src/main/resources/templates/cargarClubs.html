@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informacion Clubs</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        
+        <div class="divprinci"><p>Clubs actuales:</p>
+        <br>
+       
+        <table class="table">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre club</th>
+                <th scope="col">Localidad</th>
+                <th scope="col">Provincia</th>
+                <th scope="col">Numero responsable</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr th:each="Club : ${clubs}">
+                <td scope="row" th:text="${Club.id}"></td>
+                <td scope="row" th:text="${Club.nombre}"></td>
+                <td scope="row" th:text="${Club.localidad}"></td>
+                <td scope="row" th:text="${Club.provincia}"></td>
+                <td scope="row" th:text="${Club.numeroResponsable}"></td>
+                <td><a th:href="${'/verClub/' + Club.id}"><button type="submit" class="btn-primary">Ver</button></a></td>
+                <td><a th:href="${'/modificarClub/' + Club.id}">Editar</a></td>
+                <td><a th:href="${'/eliminarClub/' + Club.id}">Eliminar</a></td>
+            </tr>
+        </table>
+        <br>
+        <a href="../clubs"><button type="submit" class="btn-primary">Volver</button></a>
+        </div>
+            
+    </body>
+</html>

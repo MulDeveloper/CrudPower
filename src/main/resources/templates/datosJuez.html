@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+    <head>
+        <title th:text="${Juez.nombreApellidos}"></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <div class="form-group">
+                <label>Id juez:</label>
+                <input type="text" class="form-control" th:field="${Juez.id}">
+                <label>Nombre Juez:</label>
+                <input type="text" class="form-control" th:field="${Juez.nombreApellidos}">
+                <label>Comunidad:</label>
+                <input type="text" class="form-control" th:field="${Juez.comunidad}">
+                <label>Numero:</label>
+                <input type="text" class="form-control" th:field="${Juez.telefonoJuez}">
+                
+                <br>
+                <a href="../cargarJueces"><button type="submit" class="btn-primary">Volver</button></a>
+
+        </div>
+
+    </body>
+</html>

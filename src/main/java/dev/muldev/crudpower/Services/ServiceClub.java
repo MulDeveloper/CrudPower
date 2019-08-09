@@ -6,7 +6,11 @@ import java.util.List;
 
 
 public interface ServiceClub {
-    public void altaClub(Club c) throws Exception;
+    public int altaClub(Club c);
+    
+    public void bajaClub(int id) throws Exception;
     
     public List<Club> listarClubs() throws Exception;
+    
+    public Club mostrarClub(int id);
 }

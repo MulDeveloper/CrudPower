@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alta juez</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        <div>
+            <p>Datos juez:</p>
+        
+        <form action="#" th:action="@{/altaBdJuez}" th:object="${Juez}" method="post">
+            <div class="form-group">
+                <label>Nombre y apellidos Juez:</label>
+                <input type="text" class="form-control" th:field="*{nombreApellidos}">
+                <label>Comunidad</label>
+                <input type="text" class="form-control" th:field="*{comunidad}">
+                <label>Numero telefono:</label>
+                <input type="text" class="form-control" th:field="*{telefonoJuez}">
+            </div>
+
+            <br>
+            <button type="submit" class="btn-primary">Insertar</button>
+            </div>
+        </form>   
+    </body>
+</html>

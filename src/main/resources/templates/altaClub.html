@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Alta club</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        <div>
+            <p>Datos club:</p>
+        
+        <form action="#" th:action="@{/altaBdClub}" th:object="${Club}" method="post">
+            <div class="form-group">
+                <label>Nombre Club:</label>
+                <input type="text" class="form-control" th:field="*{nombre}">
+                <label>Localidad:</label>
+                <input type="text" class="form-control" th:field="*{localidad}">
+                <label>Provincia:</label>
+                <input type="text" class="form-control" th:field="*{provincia}">
+                <label>Comunidad</label>
+                <input type="text" class="form-control" th:field="*{comunidad}">
+                <label>Numero responsable:</label>
+                <input type="text" class="form-control" th:field="*{numeroResponsable}">
+            </div>
+
+            <br>
+            <button type="submit" class="btn-primary">Insertar</button>
+            </div>
+        </form>   
+    </body>
+</html>

@@ -7,18 +7,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="JUECES")
 public class Juez {
     @Id
     @Column(name="ID_JUEZ")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GenericGenerator(name="idValor" , strategy="increment")
+    @GeneratedValue(generator="idValor")
     private int id;
     @Column(name="NOMBRE_JUEZ")
     private String nombreApellidos;
     @Column(name="COMUNIDAD_JUEZ")
     private String comunidad;
+    @Column(name="TEL_JUEZ")
+    private int telefonoJuez;
 
     public Juez() {
     }
@@ -46,6 +50,16 @@ public class Juez {
     public void setComunidad(String comunidad) {
         this.comunidad = comunidad;
     }
+
+    public int getTelefonoJuez() {
+        return telefonoJuez;
+    }
+
+    public void setTelefonoJuez(int telefonoJuez) {
+        this.telefonoJuez = telefonoJuez;
+    }
+    
+    
     
     
     

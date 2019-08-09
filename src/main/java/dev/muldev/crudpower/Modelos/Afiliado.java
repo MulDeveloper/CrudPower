@@ -7,13 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="AFILIADOS")
 public class Afiliado {
     @Id
     @Column(name="ID_AFILAIDO")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GenericGenerator(name="idValor" , strategy="increment")
+    @GeneratedValue(generator="idValor")
     private int id;
     @Column(name="NOMBRE_AFILIADO")
     private String nombre;

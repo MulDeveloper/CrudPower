@@ -14,12 +14,13 @@ public class ServiceClubImpl implements ServiceClub{
     private DAOClub dao;
     
     @Override
-    public void altaClub(Club c) throws Exception {
+    public int altaClub(Club c){
         try{
             dao.save(c);
+            return 1;
         }
         catch(Exception e){
-            System.out.println("Error");
+            return -1;
         }
     }
 
@@ -27,6 +28,21 @@ public class ServiceClubImpl implements ServiceClub{
     public List<Club> listarClubs() throws Exception {
         return dao.findAll();
     }
+
+    @Override
+    public Club mostrarClub(int id) {
+        return dao.getOne(id);
+              
+    }
+
+    @Override
+    public void bajaClub(int id) throws Exception {
+        dao.deleteById(id);
+    }
+    
+    
+    
+    
     
     
     

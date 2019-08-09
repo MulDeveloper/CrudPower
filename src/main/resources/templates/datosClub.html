@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Datos Club</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <div class="form-group">
+                <label>Id club:</label>
+                <input type="text" class="form-control" th:field="${Club.id}">
+                <label>Nombre Club:</label>
+                <input type="text" class="form-control" th:field="${Club.nombre}">
+                <label>Localidad:</label>
+                <input type="text" class="form-control" th:field="${Club.localidad}">
+                <label>Provincia:</label>
+                <input type="text" class="form-control" th:field="${Club.provincia}">
+                <label>Comunidad:</label>
+                <input type="text" class="form-control" th:field="${Club.comunidad}">
+                <label>Numero responsable:</label>
+                <input type="text" class="form-control" th:field="${Club.numeroResponsable}">
+                
+                <br>
+                <a href="../cargarClubs"><button type="submit" class="btn-primary">Volver</button></a>
+
+        </div>
+
+    </body>
+</html>

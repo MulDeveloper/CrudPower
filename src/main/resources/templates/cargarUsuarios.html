@@ -2,13 +2,13 @@
 
 <html>
     <head>
-        <title>Informacion Afiliado</title>
+        <title>Informacion Afiliados</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/bootstrap.css">
     </head>
     <body>
         
-        <div class="divprinci"><p>Datos de afiliado:</p>
+        <div class="divprinci"><p>Afiliados actuales:</p>
         <br>
        
         <table class="table">
@@ -31,6 +31,8 @@
                 <td><a th:href="${'/eliminarAfiliado/' + Afiliado.id}">Eliminar</a></td>
             </tr>
         </table>
+        <br>
+        <a href="../afiliados"><button type="submit" class="btn-primary">Volver</button></a>
         </div>
             
     </body>
