@@ -18,7 +18,6 @@
                 <th scope="col">Provincia</th>
                 <th scope="col">Numero responsable</th>
                 <th>Ver</th>
-                <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
             <tr th:each="Club : ${clubs}">
@@ -28,7 +27,6 @@
                 <td scope="row" th:text="${Club.provincia}"></td>
                 <td scope="row" th:text="${Club.numeroResponsable}"></td>
                 <td><a th:href="${'/verClub/' + Club.id}"><button type="submit" class="btn-primary">Ver</button></a></td>
-                <td><a th:href="${'/modificarClub/' + Club.id}">Editar</a></td>
                 <td><a th:href="${'/eliminarClub/' + Club.id}">Eliminar</a></td>
             </tr>
         </table>

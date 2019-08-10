@@ -23,6 +23,11 @@ public class CtrlJuez {
         return "altaJuez";
 
     }
+    @GetMapping(value = "/juez")
+    public String volverJuez(){
+        return "juez";
+
+    }
     
     @RequestMapping("/altaBdJuez")
     public String altaBdJuez(Juez j) throws Exception{

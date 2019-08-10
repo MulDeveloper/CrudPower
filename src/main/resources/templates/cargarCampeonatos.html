@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informacion Campeonatos</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        
+        <div class="divprinci"><p>Campeonatos:</p>
+        <br>
+       
+        <table class="table">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Tipo Campeonato</th>
+                <th scope="col">Localidad</th>
+                <th scope="col">Club organizador</th>
+                <th>Ver</th>
+                <th>Editar</th>
+            </tr>
+            <tr th:each="Campeonato : ${campeonatos}">
+                <td scope="row" th:text="${Campeonato.id}"></td>
+                <td scope="row" th:text="${Campeonato.tipo}"></td>
+                <td scope="row" th:text="${Campeonato.localidad}"></td>
+                <td scope="row" th:text="${Campeonato.clubOrganizador}"></td>
+                <td><a th:href="${'/verCampeonato/' + Campeonato.id}"><button type="submit" class="btn-primary">Ver</button></a></td>
+                <td><a th:href="${'/modificarCampeonato/' + Campeonato.id}"><button type="submit" class="btn-primary">Editar</button></a></td>
+            </tr>
+        </table>
+        <br>
+        <a href="../campeonato"><button type="submit" class="btn-primary">Volver</button></a>
+        </div>
+            
+    </body>
+</html>

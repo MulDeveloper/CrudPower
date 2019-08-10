@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Nuevo campeonato</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.css">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+            <p>Crear campeonato:</p>
+        
+        <form action="#" th:action="@{/altaBdCampeonato}" th:object="${Campeonato}" method="post">
+            <div class="form-group">
+                <label>Tipo de campeonato:</label>
+                <select name="campeonatoSelect" class="form-control" th:field="*{tipo}">
+                    <option th:value="AEP-1" th:text="AEP-1"/>
+                    <option th:value="AEP-2" th:text="AEP-2"/>
+                    <option th:value="EPF" th:text="EPF"/>
+                    <option th:value="IPF" th:text="IPF"/>
+                </select>
+                <label>Club organizador:</label>
+                <select name="clubSelect" class="form-control" th:field="*{clubOrganizador}">
+                  <option th:each="club : ${clubes}"
+                      th:value="${club.nombre}" 
+                      th:text="${club.nombre}"/>
+                </select>
+                <label>Localidad:</label>
+                <input type="text" class="form-control" th:field="*{localidad}">
+               
+            </div>
+
+            <br>
+            <button type="submit" class="btn-primary">Insertar</button>
+            </div>
+        </form>   
     </body>
 </html>

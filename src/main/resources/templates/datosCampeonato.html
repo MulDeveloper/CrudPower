@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+        <title>Campeonato</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <div class="form-group">
+                <label>Id campeoanto:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.id}">
+                <label>Tipo:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.tipo}">
+                <label>Localidad:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.localidad}">
+                <label>Club:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.clubOrganizador}">
+                
+                <br>
+                <a href="../cargarCampeonatos"><button type="submit" class="btn-primary">Volver</button></a>
+
+        </div>
+
+    </body>
+</html>
+

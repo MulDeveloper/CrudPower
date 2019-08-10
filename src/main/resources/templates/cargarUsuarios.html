@@ -27,8 +27,8 @@
                 <td scope="row" th:text="${Afiliado.apellidos}"></td>
                 <td scope="row" th:text="${Afiliado.edad}"></td>
                 <td><a th:href="${'/verAfiliado/' + Afiliado.id}"><button type="submit" class="btn-primary">Ver</button></a></td>
-                <td><a th:href="${'/modificarAfiliado/' + Afiliado.id}">Editar</a></td>
-                <td><a th:href="${'/eliminarAfiliado/' + Afiliado.id}">Eliminar</a></td>
+                <td><a th:href="${'/modificarAfiliado/' + Afiliado.id}"><button type="submit" class="btn-primary">Editar</button></a></td>
+                <td><a th:href="${'/eliminarAfiliado/' + Afiliado.id}"><button type="submit" class="btn-primary">Eliminar</button></a></td>
             </tr>
         </table>
         <br>

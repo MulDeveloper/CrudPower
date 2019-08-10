@@ -39,13 +39,6 @@ public class CtrlClub {
 
     }
     
-    @RequestMapping(value = "/modificarClub/{id}")
-    public String modificarAfiliado(@PathVariable Integer id, Model m){
-        m.addAttribute("Club",service.mostrarClub(id));
-        return "modificarClub";
-
-    }
-    
     
     @RequestMapping(value = "/modiClubBd", method = RequestMethod.POST)
     public String modificarAfiliadoEnBd(Club c){

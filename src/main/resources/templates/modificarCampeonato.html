@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+        <title>Datos campeonato</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <form th:action="@{/modiCampeonatoBd}" th:object="${Campeonato}" method="post">
+        <div class="form-group">
+                <label>Id campeonato:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.id}">
+                <label>Tipo:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.tipo}">
+                <label>Localidad:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.localidad}">
+                <label>Club organizador:</label>
+                <input type="text" class="form-control" th:field="${Campeonato.clubOrganizador}">
+                
+                <br>
+                <button type="submit" class="btn-primary">Modificar</button>
+
+        </div>
+        </form>
+
+    </body>
+</html>
+
